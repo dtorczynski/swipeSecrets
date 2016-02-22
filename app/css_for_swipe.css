@@ -1,0 +1,139 @@
+/* Empty. Add your own CSS if you like */
+/* Card styling */
+ 
+td-cards {
+    display: block;
+}
+ 
+td-card { /*updated so it's not just a fixed size*/
+    position: absolute;
+    display:block;
+    /*left: 50%;*/
+    /*margin: 80px 0 40px -150px;*/
+    /*margin: 0 auto;*/
+    width: 80%; /*unknown how td-card's width works. setting it to 100% makes it overflow screen*/
+    max-width:100%;
+    /*height: 300px;*/
+    border: 1px solid #999;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
+    border-radius: 6px;
+    background-color: rgb(255,255,255);
+}
+ 
+.td-card .title {
+    height: 40px;
+    font-size: 15px;
+    padding: 15px;
+}
+ 
+td-card .image {
+    position: absolute;
+    top: 40px;
+    width: 100%;
+}
+ 
+td-card img {
+    /*height: 258px;*/
+    max-height:39.00vw; /* following tutorial http://stackoverflow.com/questions/20590239/maintain-aspect-ratio-of-div-but-fill-screen-width-and-height-in-css*/
+    width: 100%;
+    border-radius: 6px;
+}
+ 
+/* Overlay styling*/
+ 
+.overlayBox {
+    position: absolute;
+    height: 98%;
+    width: 100%;
+    top: 0; /*this needs to be like this. getting rid of this line causes it to fail*/
+    opacity: 0;
+    /*margin: 80px 0 0 -149px;*/
+}
+ 
+.boxed {
+    height: 50px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 30px;
+}
+ 
+.yes-text {
+    background-color: rgba(0,256,0,0.2);
+}
+ 
+.yesBox {
+    margin: 10% 60% 0% 10%;
+    border: 2px solid #00FF00;
+    color: rgb(0, 256, 0);
+    -webkit-transform: rotate(-25deg);
+}
+ 
+.no-text {
+    background-color: rgba(0.2,0,0,256);
+}
+ 
+.noBox {
+    margin: 10% 10% 0% 60%;
+    border: 2px solid #FF0000;
+    color: rgb(256, 0, 0);
+    -webkit-transform: rotate(25deg);
+}
+ 
+.fade {
+    -webkit-transition: 0.2s opacity linear;
+    transition: 0.2s opacity linear;
+    opacity: 0;
+}
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position:absolute;
+  z-index:9999;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.8;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index:10000;
+  position: absolute;
+  width: 50%; /* Default */
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'arial', 'sans-serif';
+}
+
+.pred-img{
+    position: absolute;
+    margin: auto;
+    top: 30%;
+    left: 0;
+    right: 0;
+    bottom: 30%;
+}
